@@ -1,0 +1,41 @@
+.title {
+  font-family: 'Yellowtail', sans-serif;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #0cb3a7;
+  animation: flicker 2.5s 1 alternate;
+  text-shadow: 0 0 7px #ff1199, 0 0 10px #ff1199, 0 0 21px #ff1199,
+    0 0 40px #11ffee, 0 0 80px #11ffee, 0 0 90px #11ffee, 0 0 100px #11ffee,
+    0 0 150px #11ffee;
+}
+
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  33%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px #ff1199, 0 0 11px #ff1199, 0 0 19px #ff1199,
+      0 0 40px #11ffee, 0 0 80px #11ffee, 0 0 90px #11ffee, 0 0 100px #11ffee,
+      0 0 150px #11ffee;
+  }
+
+  20%,
+  24%,
+  34%,
+  55%,
+  66%,
+  77%,
+  88% {
+    text-shadow: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .moviesGrid {
+    grid-template-columns: 100%;
+  }
+}
